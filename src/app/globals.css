@@ -25,3 +25,126 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Card CSS */
+.card {
+  width: 17vw;
+  height: 17vh;
+  border-radius: 1vh;
+  position: relative;
+  border: 1px solid #c3c6ce;
+  transition: 0.5s ease-out;
+}
+
+.card-details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1vh;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.card:hover {
+  border-color: #008bf8;
+  box-shadow: 0.5vh 1vh 2vh rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 22vw; 
+    height: 27vh; 
+    padding: 1rem; 
+    font-size: 2.2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 22vw; 
+    height: 23vh; 
+    padding: 1rem; 
+    font-size: 2.2vh;
+  }
+
+  .card-button {
+    width: 50%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 70vw; 
+    height: 20vh; 
+  }
+
+  .card-button {
+    width: 50%; 
+  }
+}
+
+/* Search Bar CSS */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  font-size: 2.5vh;
+}
+
+.input {
+  width: 20vw;
+  height: 5vh;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(0, 48, 73, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+
